@@ -2,17 +2,6 @@ import json
 import pandas as pd
 import numpy as np
 
-def print_full(x):
-    """ Disable the print limit of data frame and print out the given data frame
-
-    :param x: data frame to be fully printed
-    """
-    pd.set_option('display.max_rows', len(x))
-    pd.set_option('display.max_columns', len(x.index))
-    print(x)
-    pd.reset_option('display.max_rows')
-    pd.reset_option('display.max_columns')
-
 files = ["receipts.json", "users.json", "brands.json"]
 for file in files:
     print(file)
